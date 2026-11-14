@@ -1,0 +1,181 @@
+/* Reset dasar agar rapi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f7fc;
+    color: #1e293b;
+    padding: 20px 30px;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #09459c;
+    font-size: 24px;
+}
+
+header input {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* --- LAYOUT UTAMA --- */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- NAVIGASI KIRI --- */
+nav {
+    width: 230px;
+    background-color: #0747a6;
+    border-radius: 10px;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #042f70;
+}
+
+nav a.signout {
+    color: #f59e0b; /* Warna oranye untuk Sign Out */
+    margin-top: 10px;
+}
+
+/* --- AREA KONTEN KANAN (CSS GRID) --- */
+.content-area {
+    flex: 1;
+    display: grid;
+    /* Membagi kolom: Aside lebih lebar (1.4), Section 1 (0.8), Section 2 (1) */
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 20px;
+}
+
+/* --- BANNER WELCOME (<main>) --- */
+main {
+    grid-column: 1 / 4; /* Memanjang dari kolom 1 sampai 3 */
+    background-color: #0747a6;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 13px;
+    color: #dbeafe;
+    max-width: 480px;
+    line-height: 1.5;
+}
+
+.welcome-avatar img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: #6366f1;
+    object-fit: cover;
+}
+
+/* --- KOTAK PUTIH UMUM (Aside, Section, Footer) --- */
+aside, .section1, .section2, footer {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+h3 {
+    font-size: 15px;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+/* --- ASIDE (GRAFIK) --- */
+aside img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- SECTION 1 & SECTION 2 (ITEM KARTU) --- */
+.card-item {
+    background-color: #f1f6fd;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.card-item:last-child {
+    margin-bottom: 0;
+}
+
+.card-item span {
+    color: #475569;
+    font-size: 12px;
+}
+
+.blue-text {
+    color: #0747a6;
+}
+
+/* --- FOOTER (LAMPIRAN) --- */
+footer {
+    grid-column: 1 / 4; /* Memanjang penuh di bawah */
+}
+
+.lampiran-item {
+    background-color: #f1f6fd;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.lampiran-item:last-child {
+    margin-bottom: 0;
+}
+
+.lampiran-item a {
+    color: #0747a6;
+    font-weight: 600;
+}
